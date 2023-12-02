@@ -1,6 +1,22 @@
 body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 
 }
+
+img { 
+    border-radius:15px;
+    margin-left: 60px;
+    margin-right: 60px;
+    width: 300px;
+    height: 400px;
+}
+
+.top {
+
+}
+
 .overlay {
 display: none;
 position: fixed;
@@ -14,6 +30,7 @@ align-items: center;
 overflow: auto;
 
 }
+
 .popup {
 background-color: white;
 margin-top: 250px;
