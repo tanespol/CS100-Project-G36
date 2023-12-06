@@ -2,7 +2,6 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color:white;
 }
 
 .img-container {
@@ -28,13 +27,14 @@ img {
     background-color:darkgreen ;
     color: white;
     padding: 20px;
+    margin:0 40px 0 40px;
     text-shadow: 2px 2px 8px black;
     border-radius: 0px 0px 80px 80px;
     border-style: none dotted dotted dotted;
     border-width: 10px;
     border-color: yellow;
     font-size: 20px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 20px yellow;
 }
 
 .caption {
@@ -47,26 +47,32 @@ img {
     color: white;
     text-shadow: 2px 2px 4px black;
     border-radius: 100px;
-    border-style:dashed;
-    border-color: darkgreen;
-    border-width: 5px;
-    box-shadow: 1px 2px 5px black;
+    border-style:dotted;
+    border-color: crimson;
+    border-width: 7px;
+    box-shadow: 1px 2px 20px crimson;
 }
 
 button {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:white;
-    background-color: saddlebrown;
+    background-color: green;
     font-size: 25px;
+    font-weight: 500;
     padding: 20px;
     margin-bottom: 50px;
     border-radius: 30px;
     border-width: 8px;
-    border-color: darkgreen yellow;
-    border-style:dashed dotted ;
-    box-shadow: 1px 1px 5px black;
+    border-color: springgreen;
+    border-style:dotted ;
+    box-shadow: 1px 1px 20px springgreen;
     text-shadow: 1px 1px 3px black;
+    transition: transform 0.3s ease-in-out;
     
+}
+
+button:hover{
+    transform: scale(1.1);
 }
 
 .overlay {
