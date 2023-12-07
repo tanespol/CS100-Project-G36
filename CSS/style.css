@@ -2,6 +2,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    background-color: brown;
 }
 
 .img-container {
@@ -73,10 +74,12 @@ button {
 
 button:hover{
     transform: scale(1.1);
+    text-shadow: 1px 1px 3px black;
 }
 
 .overlay {
 display: none;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 position: fixed;
 top: 0;
 left: 0;
@@ -91,10 +94,11 @@ overflow: auto;
 .popup {
 background-color: white;
 margin-top: 250px;
+margin-bottom: 100px;
 padding: 20px;
 border-radius: 5px;
 width: 30%;
-height: 115%;
+height: 100%;
 text-align: center;
 }
 
