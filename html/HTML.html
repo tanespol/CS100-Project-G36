@@ -47,12 +47,13 @@
 
     </div>
     
-    <button onclick="showPopup()">Our Activities</button>
+    <button id ="myButton" onclick="showPopup()">Our Activities</button>
 
     <!-- Pop-up Form -->
     <div class="overlay" id="overlay">
         <div class="popup">
-        <h2>Form CSTU Passport G-36</h2>
+            <span class="close-btn" onclick="closePopup()">X</span>
+            <h2>Form CSTU Passport G-36</h2>
         <form id="myForm">
             <form id="myForm" action="#" method="post">
                 <!-- Firstname and Lastname Field -->
@@ -61,7 +62,7 @@
                     <input type="text" id="fullname" name="fullname" />
                     <small>Only enter your first name and last name, middle name is not necessary.</small>
                     <span id="fullnameError" class="error"></span>
-                </div>
+                </div> 
               
                 <!-- Student ID Field -->
                 <div class="form-group">
@@ -69,7 +70,7 @@
                     <input type="text" id="studentID" name="studentID" />
                     <small>Please enter your 10-digit student ID.</small>
                     <span id="studentIDError" class="error"></span>
-                </div>
+                </div> 
                   
                 <!-- University Email Field -->
                 <div class="form-group">
@@ -159,7 +160,7 @@
                 </div>
             
                 <!-- Submit Button -->
-                <input type="submit" onclick="submitForm(event)" value="submit">
+                <input id = "myButton" type="submit" onclick="submitForm(event)" value="submit">
         </form>
         </div>
     </div>
