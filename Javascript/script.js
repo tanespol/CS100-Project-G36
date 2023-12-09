@@ -12,7 +12,7 @@ function showPopup() {
 
         console.log('ส่งข้อมูลสำเร็จ');  // ยิง event เพื่อซ่อน Pop-up
         document.getElementById('overlay').style.display = 'none';
-        window.location.href ='ActivitiesTop.html';
+        window.location.href ='Activities.html';
     })
     .catch(error => {
         console.error('มีข้อผิดพลาดในการส่งข้อมูล:', error);
@@ -31,6 +31,9 @@ function showPopup() {
     function closePopup() {
       document.getElementById("overlay").style.display = "none"; //ปุ่มXไว้ออกจากpop up
     }
+
+    
+
 const config = {
     // backendUrl: "http://54.179.42.49/", // Default backend URL
     // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
@@ -38,7 +41,7 @@ const config = {
   };
   
   // Function to validate Firstname and Lastname
-function validateName() {
+/*function validateName() {
     const fullnameInput = document.getElementById("fullname");
     const names = fullnameInput.value.trim().split(" ");
     const errorElement = document.getElementById("fullnameError");
@@ -207,5 +210,5 @@ function validateName() {
     .getElementById("studentID")
     .addEventListener("input", validateStudentID);
   document.getElementById("email").addEventListener("input", validateEmail);
-  
+  */
 
