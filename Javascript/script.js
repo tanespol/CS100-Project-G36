@@ -104,6 +104,18 @@ function populateActivityTypes(activityTypes) {
     activityTypeSelect.appendChild(option);
   }
 }
+function validateAcademicY() {
+  const academicyinput = document.getElementById("academicYear").value;
+  const errorElement = document.getElementById("YearError");
+
+  if (academicyinput > 2566) {
+      errorElement.textContent = "";
+      return false;
+  } else {
+      errorElement.textContent = "";
+  }
+  return true;
+}
 
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
@@ -111,7 +123,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   populateActivityTypes(activityTypes);
 });
 
-// Function to submit the form
 // Function to submit the form
 async function submitForm(event) {
   event.preventDefault();
