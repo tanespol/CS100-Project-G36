@@ -24,10 +24,6 @@ img {/* class นี้เป็นรูปใหญ่ตอนที่กด
     display: grid;
     justify-content: space-around;
 }
-.image-container-1-2{
-    display: grid;
-    justify-content: space-around;
-}
 .image-container-2 {
     display: grid;
     justify-content: space-around;
@@ -120,5 +116,4 @@ img {/* class นี้เป็นรูปใหญ่ตอนที่กด
     .image-container-3 {display: flex;}
     .image-container-4 {display: flex;}
     .image-container-5 {display: flex;}
-    .image-container-1-2 {display: flex;}
 }
