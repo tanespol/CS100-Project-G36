@@ -22,6 +22,14 @@ const config = {
   // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
   backendUrl: `${window.location.origin}:8000/`, // Default backend URL
 };
+// Function to validate form inputs on user input
+function validateFormOnInput() {
+  validateName();
+  validateStudentID();
+  validateEmail();
+  validateAcademicY();
+}
+
 
 // Function to validate Firstname and Lastname
 function validateName() {
@@ -68,12 +76,17 @@ function validateEmail() {
   }
   return true;
 }
+function validateAcademicY() {
+  const InputAcadeMicY = document.getElementById("academicYear").value;
+  const errorElement = document.getElementById("YearError");
 
-// Function to validate form inputs on user input
-function validateFormOnInput() {
-  validateName();
-  validateStudentID();
-  validateEmail();
+  if (InputAcadeMicY > 2566) {
+      errorElement.textContent = "The user must be in 66-63 academic year to access to Activity page ";
+      return false;
+  } else {
+      errorElement.textContent = "";
+  }
+  return true;
 }
 
 // Function to fetch activity types from the backend
@@ -104,19 +117,6 @@ function populateActivityTypes(activityTypes) {
     activityTypeSelect.appendChild(option);
   }
 }
-function validateAcademicY() {
-  const academicyinput = document.getElementById("academicYear").value;
-  const errorElement = document.getElementById("YearError");
-
-  if (academicyinput > 2566) {
-      errorElement.textContent = "The user must be in 66-63 academic year to access to Activity page ";
-      return false;
-  } else {
-      errorElement.textContent = "";
-  }
-  return true;
-}
-
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
@@ -182,9 +182,10 @@ async function submitForm(event) {
       
       // Display success message with formatted data
       alert(responseData.message + "\n" + formattedData);
+      
       window.location.href = "Activities.html";
-
       document.getElementById("myForm").reset();
+
     } else {
       console.error("Failed to submit form data.");
 
