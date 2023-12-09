@@ -27,7 +27,7 @@ function validateFormOnInput() {
   validateName();
   validateStudentID();
   validateEmail();
-  validateAcademicY();
+  
 }
 
 
@@ -73,18 +73,6 @@ function validateEmail() {
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
-  }
-  return true;
-}
-function validateAcademicY() {
-  const InputAcadeMicY = document.getElementById("academicYear").value;
-  const errorElement = document.getElementById("YearError");
-
-  if (InputAcadeMicY > 2566) {
-      errorElement.textContent = "The user must be in 66-63 academic year to access to Activity page ";
-      return false;
-  } else {
-      errorElement.textContent = "";
   }
   return true;
 }
