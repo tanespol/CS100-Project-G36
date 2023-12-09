@@ -19,20 +19,27 @@ img {/* class นี้เป็นรูปใหญ่ตอนที่กด
     cursor: pointer;
 }
 
-.image-container1 {/*บรรทัดไว้ระบุว่ารูปในclassนี้อยู่ในบรรทัดที่เท่าไหร่
+.image-container-1 {/*บรรทัดไว้ระบุว่ารูปในclassนี้อยู่ในบรรทัดที่เท่าไหร่
     ให้ใส่classนี้ไว้ก่อน เดี๋ยวทอปมาจัดให้อีกที*/
-    display: flex;
+    display: grid;
     justify-content: space-around;
 }
-.image-container2 {
-    display: flex;
+.image-container-2 {
+    display: grid;
     justify-content: space-around;
 }
-.image-container3 {
-    display: flex;
+.image-container-3 {
+    display: grid;
     justify-content: space-around;
 }
-
+.image-container-4 {
+    display: grid;
+    justify-content: space-around;
+}
+.image-container-5 {
+    display: grid;
+    justify-content: space-around;
+}
 .image-arrange1 {
     display: flex;
     justify-content: center;
@@ -57,6 +64,22 @@ img {/* class นี้เป็นรูปใหญ่ตอนที่กด
     border-color: springgreen;
     border-width: 7px;
     box-shadow: 1px 2px 20px springgreen;
+}
+
+.headline {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:darkgreen ;
+    color: white;
+    padding: 20px;
+    margin:0 40px 0 40px;
+    text-shadow: 2px 2px 8px black;
+    border-radius: 0px 0px 80px 80px;
+    border-style: none dotted dotted dotted;
+    border-width: 10px;
+    border-color: yellow;
+    font-size: 20px;
+    box-shadow: 2px 2px 20px yellow;
 }
 #overlay {
     display: none;
@@ -84,4 +107,13 @@ img {/* class นี้เป็นรูปใหญ่ตอนที่กด
     object-fit: cover;
     box-shadow: 1px 1px 5px black;
     cursor: pointer;
+}
+
+/*for desktop*/
+@media only screen and (min-width:850px) {
+    .image-container-1 {display: flex;}
+    .image-container-2 {display: flex;}
+    .image-container-3 {display: flex;}
+    .image-container-4 {display: flex;}
+    .image-container-5 {display: flex;}
 }

@@ -6,7 +6,7 @@ body {
 }
 
 .img-container {
-    display:flex;
+    display:grid;
     justify-content: space-around;
 }
 
@@ -20,6 +20,13 @@ img {
     margin-bottom: 20px;
     object-fit: cover;
     box-shadow: 1px 1px 5px black;
+    transition-property: transform;
+    transition-duration: 1s;
+    transform-origin: center center;
+}
+
+img:hover {
+    transform: scale(1.1,1.1);
 }
 
 .headline {
@@ -169,4 +176,12 @@ cursor: pointer;
 }
 input[type="submit"]:hover {
 background-color: #45a049;
+}
+
+/* For tablet and mobile phones: */
+.img-container{display: grid;}
+
+/* For desktop: */
+@media only screen and (min-width:1080px) {
+    .img-container {display: flex;}
 }
