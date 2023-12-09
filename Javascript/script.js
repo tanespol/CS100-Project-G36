@@ -37,7 +37,7 @@ function showPopup() {
 const config = {
     // backendUrl: "http://54.179.42.49/", // Default backend URL
     // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
-    backendUrl: `${window.location.origin}:8000`, // Default backend URL
+    backendUrl: `${window.location.origin}:8000/`, // Default backend URL
   };
   
   // Function to validate Firstname and Lastname
