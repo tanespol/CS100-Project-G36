@@ -164,14 +164,14 @@ async function submitForm(event) {
       const responseData = await response.json();
       console.log("Form data submitted successfully!");
       document.getElementById("overlay").style.display = "none";
-      window.location.href = "Activities.html";
       // Format JSON data for display
       const formattedData = Object.entries(responseData.data)
-        .map(([key, value]) => `"${key}": "${value}"`)
-        .join("\n");
-
+      .map(([key, value]) => `"${key}": "${value}"`)
+      .join("\n");
+      
       // Display success message with formatted data
       alert(responseData.message + "\n" + formattedData);
+      window.location.href = "Activities.html";
 
       document.getElementById("myForm").reset();
     } else {
