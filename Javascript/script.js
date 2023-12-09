@@ -41,7 +41,7 @@ const config = {
   };
   
   // Function to validate Firstname and Lastname
-/*function validateName() {
+function validateName() {
     const fullnameInput = document.getElementById("fullname");
     const names = fullnameInput.value.trim().split(" ");
     const errorElement = document.getElementById("fullnameError");
@@ -210,5 +210,5 @@ const config = {
     .getElementById("studentID")
     .addEventListener("input", validateStudentID);
   document.getElementById("email").addEventListener("input", validateEmail);
-  */
+
 
