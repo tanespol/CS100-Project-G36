@@ -109,7 +109,7 @@ function validateAcademicY() {
   const errorElement = document.getElementById("YearError");
 
   if (academicyinput > 2566) {
-      errorElement.textContent = "";
+      errorElement.textContent = "The user must be in 66-63 academic year to access to Activity page ";
       return false;
   } else {
       errorElement.textContent = "";
