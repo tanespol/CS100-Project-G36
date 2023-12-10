@@ -27,7 +27,8 @@ function validateFormOnInput() {
   validateName();
   validateStudentID();
   validateEmail();
-  
+  validateAcademicY();
+
 }
 
 
@@ -105,6 +106,18 @@ function populateActivityTypes(activityTypes) {
     activityTypeSelect.appendChild(option);
   }
 }
+function validateAcademicY() {
+  const AcademicYInput = document.getElementById("academicYear").value;
+  const errorElement = document.getElementById("YearError");
+
+  if (AcademicYInput > 2566) {
+      errorElement.textContent = "The user must be in 66-63 academic year to access to Activity page.";
+      return false;
+  } else {
+      errorElement.textContent = "";
+  }
+  return true;
+}
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
@@ -170,8 +183,8 @@ async function submitForm(event) {
       
       // Display success message with formatted data
       alert(responseData.message + "\n" + formattedData);
-      
       window.location.href = "Activities.html";
+      
       document.getElementById("myForm").reset();
 
     } else {
